@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url(./assets/background_img/back.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Nav_Bar {
+    width: 100%;
+    height: auto;
+    padding: 20px 40px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: Show linear 1s forwards;
+    opacity: 0;
+    position: fixed;
+    z-index: 99999999999999999;
+}
+
+@keyframes Show {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Logo {
+    width: 185px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(9, 113, 79); */
+}
+
+.Logo>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#Menu_Btn {
+    font-size: 25px;
+    padding: 10px 15px;
+    border: none;
+    /* background-color: red; */
+    border: 3px solid #4e4e4e;
+    color: #4e4e4e;
+    background-color: transparent;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    display: none;
+}
+
+.Menu_Box>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Menu_Box>ul>li {
+    overflow: hidden;
+    margin: 5px;
+}
+
+.Menu_Box>ul>li>a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #dbd8d3;
+    transition: 0.4s;
+}
+
+.Menu_Box>ul>li>a:hover {
+    color: #a5a5a5;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.Brand_History {
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 10px;
+}
+
+.Brand_History>div:nth-child(3) {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 70px 0;
+    position: relative;
+}
+
+.Brand_History>div:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 1px;
+    background-color: #4e4e4e;
+}
+
+.Brand_History>div {
+    margin: 15px;
+}
+
+.Brand_History>div:nth-child(2) {
+    padding: 15px 335px;
+    line-height: 27px;
+}
+
+.Brand_History>div>p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.More_Btn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #4e4e4e;
+    color: white;
+    transition: 0.2s;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translate(0);
+    border: 4px solid transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.187);
+}
+
+.More_Btn:hover {
+    background-color: #a5a5a5;
+    color: black;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.417);
+}
+
+.focus {
+    animation: focus 0.1s linear forwards;
+}
+
+@keyframes focus {
+    from {
+        border: 4px solid transparent;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.187);
+        transform: translateY(0);
+    }
+
+    to {
+        border: 4px solid rgba(0, 0, 0, 0.474);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.551);
+        transform: translateY(5px);
+    }
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.Footer_Info {
+    width: 250px;
+    height: 50px;
+    /* background-color: red; */
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer_Info>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer_Info:nth-child(2)>div {
+    /* background-color: red; */
+    background-image: url(./assets/logo_img/logo_sticky.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.Footer_Info>div>span {
+    color: white;
+}
+
+.Footer_Info>div>a {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+    margin-left: 7px;
+}
+
+.Footer_Info>div>a:hover {
+    color: #868686;
+}
+
+@media only screen and (min-width:1200px) {
+    .swiper-slide>span {
+        font-size: 160px;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1200px) {
+    .swiper-slide>span {
+        font-size: 120px;
+    }
+
+    .Brand_History>div:nth-child(2) {
+        padding: 15px 230px;
+        line-height: 27px;
+    }
+
+    .Brands_Box {
+        flex-wrap: wrap;
+    }
+
+    .Brand_Description>div>p {
+        font-size: 20px;
+
+    }
+
+    .Marcetolog_Img>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Advertisement_Box {
+        padding: 20px 300px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .swiper-slide>span {
+        font-size: 80px;
+    }
+
+    .Brands_Box {
+        flex-wrap: wrap;
+    }
+
+    .Brand_Description>div>p {
+        font-size: 18px;
+    }
+
+    .Marcetolog_Img>img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Brand_History>div:nth-child(2) {
+        padding: 15px 170px;
+        line-height: 27px;
+    }
+
+}
+
+@media only screen and (min-width:552px) and (max-width:768px) {
+    .Nav_Bar {
+        position: relative;
+    }
+
+    #Menu_Btn {
+        display: block;
+    }
+
+    .Menu_Box>ul {
+        background: #303030;
+        right: 0;
+        top: 100%;
+        width: 300px;
+        height: 0;
+        z-index: 9999999;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .Brands_Box {
+        flex-wrap: wrap;
+    }
+
+    .Brand_Description>div>p {
+        font-size: 15px;
+    }
+
+    .Brand_History>div:nth-child(2) {
+        padding: 15px 60px;
+        line-height: 27px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:552px) {
+    .Nav_Bar {
+        position: relative;
+    }
+
+    #Menu_Btn {
+        display: block;
+    }
+
+    .Menu_Box>ul {
+        right: 0;
+        top: 100%;
+        width: 100%;
+        height: 0;
+        z-index: 9999999;
+        flex-direction: column;
+        position: absolute;
+        background: #303030;
+    }
+
+    .Menu_Box>ul>li {
+        /* background-color: green; */
+        width: 80%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Menu_Box>ul>li>a {
+        background-color: #000000;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .Slider_Container {
+        height: 300px;
+    }
+
+    .swiper-slide>span {
+        font-size: 20px;
+    }
+
+    .Brand_History div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Brand_History img{
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .Brands_Box {
+        flex-wrap: wrap;
+    }
+
+    .Brand_Description {
+        padding: 25px;
+    }
+
+    .Brand_Description>div>p {
+        font-size: 16px;
+    }
+    .text_wrapper{
+        padding: 20px;
+    }
+
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .Footer_Info {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 40px;
+        margin: 5px;
+    }
+
+    .Footer_Info>div {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .Footer_Info:nth-child(2)>div {
+        background-size: 36%;
+        background-position: left;
+    }
+
+    .Brand_History>div:nth-child(2) {
+        padding: 15px 0;
+        line-height: 27px;
+    }
+}
